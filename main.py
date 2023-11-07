@@ -17,9 +17,9 @@ def analysis():
                     word = ''
     chain = {}
     for i in range(len(lst)):
-        wd = lst.pop(0)
-        if wd not in chain:
-            chain[wd] = lst
+        first = lst.pop(0)
+        if first not in chain:
+            chain[first] = lst
         else:
             continue
     return numb, chain
