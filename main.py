@@ -2,8 +2,27 @@ from random import choice
 
 
 def analysis():
-    return 0, {}
-
+    lst = []
+    with open('input.txt') as f_in:
+        numb = int(f_in.readline())
+        for ptr in f_in:
+            word = ''
+            for i in range(len(ptr)):
+                if i == len(ptr) and ptr[i] == '-' and word != 0:
+                    continue
+                if ptr[i].isalpha():
+                    word += i
+                else:
+                    lst.append(word)
+                    word = ''
+    dictionary = {}
+    for i in range(len(lst)):
+        n = lst.pop(0)
+        if n not in dictionary:
+            dictionary[n] = lst
+        else:
+            continue
+    return numb, dictionary
 
 def delirium_generator(words_dict, cnt):
     txt = ''
