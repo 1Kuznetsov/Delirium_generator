@@ -15,14 +15,14 @@ def analysis():
                 else:
                     lst.append(word)
                     word = ''
-    dictionary = {}
+    chain = {}
     for i in range(len(lst)):
-        n = lst.pop(0)
-        if n not in dictionary:
-            dictionary[n] = lst
+        wd = lst.pop(0)
+        if wd not in chain:
+            chain[wd] = lst
         else:
             continue
-    return numb, dictionary
+    return numb, chain
 
 def delirium_generator(words_dict, cnt):
     txt = ''
