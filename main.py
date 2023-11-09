@@ -59,7 +59,10 @@ def delirium_generator(words_dict, cnt):
 
     return txt
 
-
 if __name__ == '__main__':
     num, data = analysis()
-    print(delirium_generator(data, num))
+    generated_text = delirium_generator(data, num)
+
+    with open('output.txt', 'w') as f_out:
+        f_out.write(generated_text)
+
