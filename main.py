@@ -10,7 +10,7 @@ def analysis():
             for i in range(len(ptr)):
                 if i == len(ptr) and ptr[i] == '-' and word != 0:
                     continue
-                if ptr[i].isalpha():
+                if not ptr[i] == '':
                     word += i
                 else:
                     lst.append(word)
