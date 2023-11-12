@@ -1,3 +1,5 @@
+# Kuznetsov Igor - 65 %, Yadreeva Maria - 35 %
+
 from random import choice
 
 
