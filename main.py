@@ -5,7 +5,6 @@ def analysis():
     lst = []
     with open('input.txt') as f_in:
         numb = int(f_in.readline())
-        # text = list(set(f_in.readline().split()))
         for ptr in f_in:
             word = ''
             for i in range(len(ptr)):
@@ -22,26 +21,19 @@ def analysis():
         if first not in chain:
             chain[first] = lst
         else:
-            continue
+            chain[i] = lst
     return numb, chain
 
-    # numb_text = len(text)
-    # dictionary = {}
-    # for i in text:
-    #     if i not in dictionary:
-    #         for j in range(numb_text):
-    #             dictionary[j] = i
-    # print(dictionary)
 
 
 # text = list(set(input().split()))
-numb = len(text)
-dictionary = {}
-for i in text:
-    if i not in dictionary:
-        for j in range(numb):
-            dictionary[j] = i
-print(dictionary)
+# numb = len(text)
+# dictionary = {}
+# for i in text:
+#     if i not in dictionary:
+#         for j in range(numb):
+#             dictionary[j] = i
+# print(dictionary)
 
 
 def delirium_generator(words_dict, cnt):
