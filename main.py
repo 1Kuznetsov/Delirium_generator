@@ -24,6 +24,17 @@ def analysis():
             continue
     return numb, chain
 
+
+# text = list(set(input().split()))
+# numb = len(text)
+# dictionary = {}
+# for i in text:
+#     if i not in dictionary:
+#         for j in range(numb):
+#             dictionary[j] = i
+# print(dictionary)
+
+
 def delirium_generator(words_dict, cnt):
     txt = ''
     limit = 25
